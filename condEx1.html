@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="number" id="input">
+   <button id="age" onclick="ageCheck()">click</button>
+   <div id="result"></div> 
+</body>
+<script>
+    let input = document.getElementById("input")
+    let result = document.getElementById("result")
+
+    function ageCheck() {
+        if (input.value < 18) {
+            // console.log('you are lesser than 18');
+            let ageRemain = 18 - Number(input.value)
+            result.innerHTML =   `You are left with ${ageRemain} years to drive.` 
+            // console.log(ageRemain);  
+        }else{
+            // console.log('you are old enough to drive');
+            result.innerHTML = 'You are old enough to drive.'
+        }
+    }
+</script>
+</html>
